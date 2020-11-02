@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <link href="otherpages.css" rel="stylesheet">
+
+        <script>
+        //Take the user input and compare it to a list of cities we have visited
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelector('#submit').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    //I know this is far from the best design, but I tried to make an array of cities and to use a for loop to iterate through the array and it never worked
+                    if (input.value == "Quebec" || input.value == "Mont-Tremblant" || input.value == "Val-D'or" || input.value == "Rouyn-Noranda" || input.value == "Thunder Bay" || input.value == "Vancouver" || input.value == "Calgary" || input.value == "Victoria" || input.value == "Tobermorry" || input.value == "Edmonton" || input.value == "Winnipeg" || input.value == "Regina"|| input.value == "Saskatoon" || input.value == "Lake Louise" || input.value == "Banff" || input.value == "Jasper"|| input.value == "Nanaimo"|| input.value == "Toronto" || input.value == "Niagara" || input.value == "Revelstoke" || input.value == "Tofino"|| input.value == "Moose Jaw"|| input.value == "Kelowna"|| input.value == "Penticton"|| input.value == "Lion's Head"|| input.value == "Vernon"|| input.value == "Marathon" || input.value == "Manitoulin Island" || input.value == "Sudbury" || input.value == "Lac Simon"){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#answer').innerHTML = 'Yes, we have been there!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#answer').innerHTML = 'No, we have not been there yet!';
+                        console.log(places[0]);
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="index.html">Homepage</a>
+                <a href="WhoWeAre.html">Who We Are</a>
+                <a href="OurProject.html">Our Project</a>
+                <h1>Nova's Adventure Across Canada</h1>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main">
+        <h2>Our Adventure</h2>
+        <p></p>
+        <h3> Enter the name of a Canadian city to see if we've been there!</h3>
+    </div>
+        <form>
+            <input  type='text' autocomplete='off' placeholder='Search city...' id='city'></input>
+            <button type='submit' id='submit'>Submit</button>
+        </form>
+
+    <p id="answer"></p>
+
+    <h3>A few pictures of our travels in chronological order</h3>
+
+    <h4>Having breakfast in Lac Simon</h4>
+    <p><img src="p1.jpg" width="600" height="450" alt="Having breakfast in Lac Simon"></p>
+
+    <h4>Having coffee by Lac-Rapide</h4>
+    <p><img src="p2.jpg" width="600" height="450" alt="Having coffee by Lac-Rapide"></p>
+
+    <h4>Bordwalk in Rouyn-Noranda</h4>
+    <p><img src="p3.jpg" width="450" height="600" alt="Bordwalk in Rouyn-Noranda"></p>
+
+    <h4>Pier in Gordon, Manitoulin Island</h4>
+    <p><img src="p4.jpg" width="450" height="600" alt="Pier in Gordon, Manitoulin Island"></p>
+
+    <h4>Pebble beach in Gordon, Manitoulin Island</h4>
+    <p><img src="p5.jpg" width="600" height="450" alt="Pebble beach in Gordon, Manitoulin Island"></p>
+
+    <h4>Our beautiful camping spot with a view on Lake Superior, Marathon</h4>
+    <p><img src="p6.jpg" width="600" height="450" alt="Sunset with a view on Lake Superior"></p>
+
+    <h4>Pebble beach, Marathon, Ontario</h4>
+    <p><img src="p7.jpg" width="450" height="600" alt="Pebble beach, Marathon, Ontario"></p>
+
+    <h4>Lovely rest area near Thunder Bay, Ontario</h4>
+    <p><img src="p8.jpg" width="600" height="450" alt="Pebble beach, Marathon, Ontario"></p>
+
+    <h4>We're halfway there!</h4>
+    <p><img src="p9.jpg" width="600" height="450" alt="Halfway through Canada"></p>
+
+    <h4>Moose Jaw, Saskatchewan</h4>
+    <p><img src="p10.jpg" width="450" height="600" alt="Moose Jaw, Saskatchewan"></p>
+
+    <h4>Pictures from Alberta's beautiful national parks</h4>
+    <!-- Image Carousel from Bootstrap -->
+    <!-- https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
+    <div id="carrousel">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+              <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="palberta1.jpg" width="600" height="450" class="center-block" alt="Nova and Catherine on a boat">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta2.jpg" width="600" height="450" class="center-block" alt="Hiking together">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta3.jpg" width="600" height="450" class="center-block" alt="Skating">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta4.jpg" width="600" height="450" class="center-block" alt="Baby Nova">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta5.jpg" width="600" height="450" class="center-block" alt="Catherine and Nova">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta6.jpg" width="450" height="600" class="center-block" alt="Catherine and Nova">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta7.jpg" width="600" height="450" class="center-block" alt="Catherine and Nova">
+                    </div>
+
+                    <div class="item">
+                        <img src="palberta8.jpg" width="600" height="450" class="center-block" alt="Catherine and Nova">
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Visiting Vancouver</h4>
+    <p><img src="p11.jpg" width="450" height="600" alt="Vancouver"></p>
+
+    <h4>Camping by Gonzales Bay, Victoria</h4>
+    <p><img src="p12.jpg" width="600" height="450" alt="Gonzales Bay, Victoria"></p>
+
+    <h4>Visiting the Parliament of British Columbia</h4>
+    <p><img src="p13.jpg" width="600" height="450" alt="Parliament of British Columbia"></p>
+
+    <h4>Finally dipping my paws in the Pacific Ocean in Tofino!</h4>
+    <p><img src="p14.jpg" width="600" height="450" alt="Pacific ocean"></p>
+
+    </body>
+</html>
